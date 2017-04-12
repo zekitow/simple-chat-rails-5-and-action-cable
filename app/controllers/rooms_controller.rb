@@ -1,5 +1,17 @@
 class RoomsController < ApplicationController
 
+ def subscribed
+    stream_from "rooms_#{params['room_id']}_channel"
+  end
+
+  def unsubscribed
+    # Any cleanup needed when channel is unsubscribed
+  end
+
+  def send_message(data)
+    current_user.messages.create!(body: data['message'], room_id: data['room_id'])
+  end
+
   def index
     @rooms = Room.all
   end
@@ -20,6 +32,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.includes(:messages).find_by(id: params[:id])
+    @message = Message.new
   end
 
   private
