@@ -18,7 +18,7 @@ gem 'jbuilder', '~> 2.5'
 
 # simple chat dependencies
 gem 'devise'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 
 group :development, :test do
   gem 'byebug', platform: :mri
