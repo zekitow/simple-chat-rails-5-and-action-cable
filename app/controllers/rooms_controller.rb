@@ -18,6 +18,10 @@ class RoomsController < ApplicationController
     end
   end
 
+  def show
+    @room = Room.includes(:messages).find_by(id: params[:id])
+  end
+
   private
 
   def room_params
