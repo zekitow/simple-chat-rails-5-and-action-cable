@@ -1,24 +1,13 @@
-# README
+# simple chat rails 5 and action cable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple chat created for learning purposes.
 
-Things you may want to cover:
+## how to run?
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    git clone https://github.com/zekitow/simple-chat-rails-5-and-action-cable.git 
+    cd simple-chat-rails-5-and-action-cable
+    bundle
+    rake db:migrate
+    rails s
+    
+Go to your browser and have fun: **http://localhost:3000** 
