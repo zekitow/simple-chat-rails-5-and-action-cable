@@ -1,0 +1,15 @@
+@import 'bourbon/bourbon'
+
+.dropdown-toggle > .dropdown-menu
+  +transform(scale(0))
+  +transition(transform 0.2s ease-in-out)
+  visibility: visible
+  opacity: 0
+  top: 95%
+  display: block
+
+.dropdown-toggle:hover > .dropdown-menu,
+.dropdown-toggle:active > .dropdown-menu
+  +transition(transform 0.2s ease-in-out)
+  +transform(scale(1))
+  opacity: 1 !important
